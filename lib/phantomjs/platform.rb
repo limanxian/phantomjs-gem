@@ -103,6 +103,22 @@ module Phantomjs
       end
     end
 
+    class Arm64 < Platform
+      class << self
+        def useable?
+          host_os.include?('linux') and architecture.include?('aarch64')
+        end
+
+        def platform
+          'aarch64-linux'
+        end
+
+        def package_url
+          'no url'
+        end
+      end
+    end
+
     class Linux32 < Platform
       class << self
         def useable?
