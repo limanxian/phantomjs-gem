@@ -119,6 +119,22 @@ module Phantomjs
       end
     end
 
+    class Mips64el < Platform
+      class << self
+        def useable?
+          host_os.include?('linux') and architecture.include?('mips64el')
+        end
+
+        def platform
+          'mips64el-linux'
+        end
+
+        def package_url
+          'no url'
+        end
+      end
+    end
+
     class Linux32 < Platform
       class << self
         def useable?

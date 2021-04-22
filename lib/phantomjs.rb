@@ -58,5 +58,6 @@ require 'phantomjs/platform'
 Phantomjs.available_platforms << Phantomjs::Platform::Linux32
 Phantomjs.available_platforms << Phantomjs::Platform::Linux64
 Phantomjs.available_platforms << Phantomjs::Platform::Arm64
+Phantomjs.available_platforms << Phantomjs::Platform::Mips64el
 Phantomjs.available_platforms << Phantomjs::Platform::OsX
 Phantomjs.available_platforms << Phantomjs::Platform::Win32
